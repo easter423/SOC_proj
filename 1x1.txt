@@ -1,0 +1,21 @@
+`timescale 1ns / 1ps
+module median_filter(
+    input             clk_i,
+    input             rst_ni,
+    input      [15:0] pixel_in_i,
+    input      [15:0] h_count_i,
+    input      [15:0] v_count_i,
+    input             hsync_i,
+    input             vsync_i,
+    output reg [15:0] pixel_out_o
+    );
+
+    always @(posedge clk_i or negedge rst_ni) begin
+        if(!rst_ni) begin
+            pixel_out_o <= 16'd0;
+        end else begin
+            pixel_out_o <= pixel_in_i;
+        end
+    end
+
+endmodule

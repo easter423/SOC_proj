@@ -1,0 +1,106 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Tue Dec 17 21:21:42 2024
+| Host         : DESKTOP-T0U5DNL running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xczu3eg
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    28 |
+|    Minimum number of control sets                        |    28 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    38 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    28 |
+| >= 0 to < 4        |     6 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     5 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     1 |
+| >= 16              |    15 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              87 |           32 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              86 |           25 |
+| Yes          | No                    | No                     |              41 |           17 |
+| Yes          | No                    | Yes                    |              64 |           19 |
+| Yes          | Yes                   | No                     |             124 |           22 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------+-----------------------------------------------------------+-----------------------------------------------------------+------------------+----------------+--------------+
+|       Clock Signal       |                       Enable Signal                       |                      Set/Reset Signal                     | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------+-----------------------------------------------------------+-----------------------------------------------------------+------------------+----------------+--------------+
+|  sysclk_i_IBUF_BUFG      |                                                           |                                                           |                1 |              1 |         1.00 |
+|  TFTLCD_TCLK_o_OBUF_BUFG | RAM_TO_LCD/vsync                                          |                                                           |                1 |              1 |         1.00 |
+|  clk_i2c_w_BUFG          | CAM_I2C/component_camera_i2c_command/E[0]                 |                                                           |                2 |              2 |         1.00 |
+|  clk_i2c_w_BUFG          | CAM_I2C/component_camera_i2c_command/sig_state[0]         | CAM_I2C/component_camera_i2c_command/sig_count[6]_i_1_n_0 |                1 |              2 |         2.00 |
+|  clk_i2c_w_BUFG          | CAM_I2C/sig_camera_RESETn                                 |                                                           |                1 |              2 |         2.00 |
+|  camera_MCLK_o_OBUF_BUFG |                                                           |                                                           |                2 |              2 |         1.00 |
+|  clk_i2c_w_BUFG          | CAM_I2C/component_camera_i2c_command/sig_state[0]         |                                                           |                2 |              6 |         3.00 |
+|  clk_i2c_w_BUFG          | CAM_I2C/sig_i2c_rom_address[7]_i_2_n_0                    | CAM_I2C/component_camera_i2c_rom/sig_i2c_rom_final_reg_0  |                2 |              8 |         4.00 |
+|  clk_i2c_w_BUFG          | CAM_I2C/sig_initialize_count[7]_i_1_n_0                   |                                                           |                2 |              8 |         4.00 |
+|  camera_PCLK_i_IBUF_BUFG | CAMEARA_TO_RAM/sig_ram_wr_en0_in                          | CAMEARA_TO_RAM/sig_en                                     |                3 |              8 |         2.67 |
+|  camera_PCLK_i_IBUF_BUFG | CAMEARA_TO_RAM/sig_temp                                   | CAMEARA_TO_RAM/sig_en                                     |                1 |              8 |         8.00 |
+|  clk_i2c_w_BUFG          |                                                           |                                                           |                6 |              9 |         1.50 |
+|  TFTLCD_TCLK_o_OBUF_BUFG | RAM_TO_LCD/vsync                                          | RAM_TO_LCD/v_count                                        |                2 |             15 |         7.50 |
+|  sysclk_i_IBUF_BUFG      |                                                           | CLK_GEN_MAIN/clear                                        |                3 |             16 |         5.33 |
+|  TFTLCD_TCLK_o_OBUF_BUFG |                                                           | RAM_TO_LCD/vsync                                          |                3 |             16 |         5.33 |
+|  camera_PCLK_i_IBUF_BUFG | CAMEARA_TO_RAM/sig_v_count0                               | CAMEARA_TO_RAM/sig_cam_vsync                              |                3 |             16 |         5.33 |
+|  camera_PCLK_i_IBUF_BUFG | CAMEARA_TO_RAM/sig_temp                                   | CAMEARA_TO_RAM/sig_h_count[15]_i_1_n_0                    |                3 |             16 |         5.33 |
+|  camera_MCLK_o_OBUF_BUFG |                                                           | CLK_GEN_I2C/clear                                         |                3 |             16 |         5.33 |
+|  camera_MCLK_o_OBUF_BUFG |                                                           | CLK_GEN_TFTLCD/clear                                      |                3 |             16 |         5.33 |
+|  TFTLCD_TCLK_o_OBUF_BUFG | RAM_TO_LCD/ram_rd_addr                                    | RAM_TO_LCD/vsync_reg_n_0                                  |                3 |             17 |         5.67 |
+|  camera_PCLK_i_IBUF_BUFG | CAMEARA_TO_RAM/cam_wr_en_w                                | CAMEARA_TO_RAM/sig_cam_vsync                              |                3 |             17 |         5.67 |
+|  camera_PCLK_i_IBUF_BUFG | CAMEARA_TO_RAM/sig_temp                                   | CAMEARA_TO_RAM/sig_ram_wr_addr[16]_i_1_n_0                |                3 |             17 |         5.67 |
+|  clk_i2c_w_BUFG          |                                                           | CAM_I2C/sel0[7]                                           |               13 |             22 |         1.69 |
+|  clk_i2c_w_BUFG          | CAM_I2C/component_camera_i2c_command/sig_i2c_command_data |                                                           |                9 |             22 |         2.44 |
+| ~TFTLCD_TCLK_o_OBUF_BUFG |                                                           |                                                           |                6 |             22 |         3.67 |
+|  camera_PCLK_i_IBUF_BUFG |                                                           |                                                           |                5 |             23 |         4.60 |
+|  TFTLCD_TCLK_o_OBUF_BUFG |                                                           |                                                           |               13 |             30 |         2.31 |
+|  TFTLCD_TCLK_o_OBUF_BUFG | RAM_TO_LCD/E[0]                                           | rst_ni_IBUF_inst/O                                        |               19 |             64 |         3.37 |
++--------------------------+-----------------------------------------------------------+-----------------------------------------------------------+------------------+----------------+--------------+
+
+

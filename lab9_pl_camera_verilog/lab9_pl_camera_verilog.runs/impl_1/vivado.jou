@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Tue Dec 17 21:19:45 2024
+# Process ID: 11716
+# Current directory: C:/tsoc/Lab9/lab9_pl_camera_verilog/lab9_pl_camera_verilog.runs/impl_1
+# Command line: vivado.exe -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
+# Log file: C:/tsoc/Lab9/lab9_pl_camera_verilog/lab9_pl_camera_verilog.runs/impl_1/top.vdi
+# Journal file: C:/tsoc/Lab9/lab9_pl_camera_verilog/lab9_pl_camera_verilog.runs/impl_1\vivado.jou
+# Running On: DESKTOP-T0U5DNL, OS: Windows, CPU Frequency: 2803 MHz, CPU Physical cores: 4, Host memory: 16873 MB
+#-----------------------------------------------------------
+source top.tcl -notrace

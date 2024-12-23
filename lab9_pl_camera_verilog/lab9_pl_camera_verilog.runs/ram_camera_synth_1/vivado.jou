@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Fri Dec 13 01:09:51 2024
+# Process ID: 22552
+# Current directory: C:/Users/kyha/Downloads/lab9_pl_camera_verilog/lab9_pl_camera_verilog.runs/ram_camera_synth_1
+# Command line: vivado.exe -log ram_camera.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ram_camera.tcl
+# Log file: C:/Users/kyha/Downloads/lab9_pl_camera_verilog/lab9_pl_camera_verilog.runs/ram_camera_synth_1/ram_camera.vds
+# Journal file: C:/Users/kyha/Downloads/lab9_pl_camera_verilog/lab9_pl_camera_verilog.runs/ram_camera_synth_1\vivado.jou
+# Running On: GH-DESKTOP, OS: Windows, CPU Frequency: 3792 MHz, CPU Physical cores: 8, Host memory: 17071 MB
+#-----------------------------------------------------------
+source ram_camera.tcl -notrace

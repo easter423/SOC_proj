@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../lab9_pl_camera_verilog.gen/sources_1/ip/ram_camera/sim/ram_camera.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
